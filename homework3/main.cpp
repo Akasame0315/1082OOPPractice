@@ -15,15 +15,20 @@ int main() {
 	Complex first = complex[0]+(complex[1]*complex[2]);
 	Complex second = complex[3] - complex[4];
 
+	//檢查complex以及cpp檔有沒有定義印出正確的負數
+	/*for (int i = 0; i < 5; i++) {
+		cout << "complex" << i << "= " << complex[i] << endl;
+	}*/
+
 	cout << "first="<< first.toString() << endl;
 	cout << "second=" << second.toString() << endl;
 
 	//++跟--要寫在輸出後面，不然原本的first和second會被改掉
-	Complex xFirst = ++first;
-	Complex xSecond = --second;
+	++first;
+	--second;
 
-	cout << "++first=" << xFirst.toString() << endl;
-	cout << "--second=" << xSecond.toString() << endl;
+	cout << "++first=" << first.toString() << endl;
+	cout << "--second=" << second.toString() << endl;
 
 	//寫在前面的寫法
 	/*Complex xFirst = first++;

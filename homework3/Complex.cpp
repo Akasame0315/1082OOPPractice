@@ -103,7 +103,14 @@ Complex Complex::operator-() {
 }
 
 ostream& operator<<(ostream& out, const Complex& complex) {
-	out << complex.intNumber << "+" << complex.complexNumber;
+	out << complex.intNumber;
+
+	if (complex.complexNumber >= 0) //店计タ计
+		out << "+" << complex.complexNumber << "i";
+	else if (complex.complexNumber == -1) //店计-1-i
+		out << "-i";
+	else                            //店计-1璽计钡
+		out << complex.complexNumber << "i";
 	return out;
 }
 istream& operator>>(istream& in, Complex& complex) {
