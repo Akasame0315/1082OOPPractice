@@ -1,0 +1,8 @@
+﻿  Ball.cpp
+  Cube.cpp
+  Cube.h
+  GeometricObject.cpp
+  main.cpp
+  正在產生程式碼...
+Debug\Cube.obj : warning LNK4042: 指定物件超過一次，已忽略多餘的部分
+  practice15_2_Polymorphism.vcxproj -> D:\1082物件導向\practice15_2_Polymorphism\Debug\practice15_2_Polymorphism.exe

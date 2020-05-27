@@ -1,0 +1,2 @@
+D:\1082物件導向\practice15_2_Polymorphism\Debug\practice15_2_Polymorphism.exe
+D:\1082物件導向\practice15_2_Polymorphism\Debug\practice15_2_Polymorphism.pdb
