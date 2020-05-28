@@ -20,7 +20,7 @@ int main() {
 		cout << "complex" << i << "= " << complex[i] << endl;
 	}*/
 
-	cout << "first="<< first.toString() << endl;
+	cout << "first="<< first << endl;
 	cout << "second=" << second.toString() << endl;
 
 	//++跟--要寫在輸出後面，不然原本的first和second會被改掉
