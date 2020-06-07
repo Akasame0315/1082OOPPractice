@@ -1,14 +1,14 @@
 #ifndef STUCARD_H
 #define STUCARD_H
-#include <iostream>
+#include <fstream>
 #include <iomanip>
 #include <string>
-#include <fstream>
+#include <iostream>
 using namespace std;
 
-class stuCard {
+class StuCard {
 public:
-	stuCard(string, bool, double newAry[]);
+	StuCard(string, bool, double[3]);
 
 	void setName(string);
 	string getName();
@@ -16,11 +16,13 @@ public:
 	void setSex(bool);
 	bool getSex();
 
-	void setScore(int, double newAry[]);
+	void setScore(int, double[3]);
 	double getScore(int);
 
-	void writeToFile(istream& in);
-	void readToFile(ostream& out);
+	//¼g¤J
+	void writeToFile(ofstream&);
+	//ÅªÀÉ
+	void readFromFile(ifstream&);
 
 private:
 	string name;

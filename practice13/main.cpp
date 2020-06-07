@@ -1,54 +1,47 @@
+//答案在cloud judge會對,但vs不能執行
 #include "StuCard.h"
-#include <fstream>
 
 int main() {
-	ifstream input("stuCard.txt");
+	//建一個ofstream, 開檔寫入檔案
+	ofstream out;
+	out.open("StuCards.txt", ios::out | ios::app);
 
-	string name1 = "Jerry";
-	bool sex1 = 1;
-	double score1[] = { 80.0, 70.0, 90.0 };
+	double score1[3] = { 80.0, 70.0, 90.0 };
+	StuCard s1("Jerry", 1, score1);
+	s1.writeToFile(out);
 
-	input >> name1 >> sex1 >> score1[0] >> score1[1] >> score1[2];
-	cout << name1 << " " << sex1 << " " << setprecision(1) << fixed << score1[0] << " " << score1[1] << " " << score1[2] << endl;
+	double score2[3] = { 85.0, 77.0, 95.0 };
+	StuCard s2("John", 1, score2);
+	s2.writeToFile(out);
 
-	string name2 = "John";
-	bool sex2 = 1;
-	double score2[] = { 85.0, 77.0, 95.0 };
+	double score3[3] = { 83.0, 75.0, 70.0 };
+	StuCard s3("Mary", 0, score3);
+	s3.writeToFile(out);
 
-	input >> name2 >> sex2 >> score2[0] >> score2[1] >> score2[2];
-	cout << name2 << " " << sex2 << " " << setprecision(1) << fixed << score2[0] << " " << score2[1] << " " << score2[2] << endl;
+	double score4[3] = { 73.0, 95.0, 67.0 };
+	StuCard s4("Tom", 1, score4);
+	s4.writeToFile(out);
 
-	string name3 = "Mary";
-	bool sex3 = 0;
-	double score3[] = { 83.0, 75.0, 70.0 };
+	double score5[3] = { 88.0, 79.0, 71.0 };
+	StuCard s5("Claire", 0, score5);
+	s5.writeToFile(out);
 
-	input >> name3 >> sex3 >> score3[0] >> score3[1] >> score3[2];
-	cout << name3 << " " << sex3 << " " << setprecision(1) << fixed << score3[0] << " " << score3[1] << " " << score3[2] << endl;
+	//關檔
+	out.close();
 
-	string name4 = "Tom";
-	bool sex4 = 1;
-	double score4[] = { 73.0, 95.0, 67.0 };
+	//建ifstream開檔讀取檔案
+	ifstream in;
+	in.open("StuCards.txt", ios::in);
 
-	input >> name4 >> sex4 >> score4[0] >> score4[1] >> score4[2];
-	cout << name4 << " " << sex4 << " " << setprecision(1) << fixed << score4[0] << " " << score4[1] << " " << score4[2] << endl;
+	StuCard s6[5] = { s1, s2, s3, s4, s5 };
 
-	string name5 = "Claire";
-	bool sex5 = 0;
-	double score5[] = { 88.0, 79.0, 71.0 };
+	//讀檔
+	for (int i = 0; i < 5; i++) {
+		s6[i].readFromFile(in);
+	}
 
-	input >> name5 >> sex5 >> score5[0] >> score5[1] >> score5[2];
-	cout << name5 << " " << sex5 << " " << setprecision(1) << fixed << score5[0] << " " << score5[1] << " " << score5[2] << endl;
-
-	input.close();
-
-	/*double score1[] = { 80.0, 70.0, 90.0 };
-	stuCard stu1("Jerry", 1, score1);
-
-	double score2[] = { 85.0, 77.0, 95.0 };
-	stuCard stu2("John", 1, score2);
-
-	stu1.writeToFile;
-	stu1.readToFile;*/
+	//關檔
+	in.close();
 
 	system("pause");
 	return 0;

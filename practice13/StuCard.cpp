@@ -1,47 +1,43 @@
 #include "StuCard.h"
 
-stuCard::stuCard(string newName, bool newSex, double newAry[]) {
+StuCard::StuCard(string newName, bool newSex, double newAry[3]) {
 	this->name = newName;
 	this->sex = newSex;
-	scoreAry[0] = newAry[0];
-	scoreAry[1] = newAry[1];
-	scoreAry[2] = newAry[2];
+	for (int i = 0; i < 3; i++) {
+		scoreAry[i] = newAry[i];
+	}
 }
 
-void stuCard::setName(string newName) {
-	name = newName;
+void StuCard::setName(string newName) {
+	this->name = newName;
 }
-string stuCard::getName() {
+string StuCard::getName() {
 	return name;
 }
 
-void stuCard::setSex(bool newSex) {
-	sex = newSex;
+void StuCard::setSex(bool newSex) {
+	this->sex = newSex;
 }
-bool stuCard::getSex() {
+bool StuCard::getSex() {
 	return sex;
 }
 
-void stuCard::setScore(int size, double newAry[]) {
-	scoreAry[size] = newAry[size];
+void StuCard::setScore(int i, double newAry[3]) {
+	scoreAry[i] = newAry[i];
 }
-double stuCard::getScore(int size) {
-	return scoreAry[size];
+double StuCard::getScore(int i) {
+	return scoreAry[i];
 }
 
-void stuCard::writeToFile(istream& in) {
+void StuCard::writeToFile(ofstream& out) {
+	out << name << " " << sex << " " << setprecision(1) << fixed << scoreAry[0] << " " << scoreAry[1] << " " << scoreAry[2] << endl;
+}
+void StuCard::readFromFile(ifstream& in) {
 	string n;
 	bool s;
-	double ary[3];
+	double g[3];
 	
-	in >> n >> s >> ary[0] >> ary[1] >> ary[2];
-}
-void stuCard::readToFile(ostream& out) {
-	out << getName() << " " << getSex() << " ";
-	for (int i = 0; i < 3; i++) {
-		out << getScore(i) << " ";
-	}
-	out << endl;
+	in >> n >> s >> g[0] >> g[1] >> g[2];
 
-	cout << getName() << " " << getSex() << " " << getScore(0) << getScore(1) << getScore(2) << endl;
+	cout << n << " " << s << " " << setprecision(1) << fixed << g[0] << " " << g[1] << " " << g[2] << endl;
 }
