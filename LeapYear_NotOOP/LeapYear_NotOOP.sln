@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "LeapYear_NotOOP", "LeapYear_NotOOP.pyproj", "{EBC85101-C9F9-4103-B94A-B990CFB3EFC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBC85101-C9F9-4103-B94A-B990CFB3EFC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC85101-C9F9-4103-B94A-B990CFB3EFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1036C6B-B08F-49F8-A8C3-5EBBE4002E0B}
+	EndGlobalSection
+EndGlobal
