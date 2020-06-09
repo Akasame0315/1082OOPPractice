@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30128.74
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Rectangle_Encapsulation", "Rectangle_Encapsulation.pyproj", "{C1268284-BF78-4738-B4D4-C53C3EFC8258}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1268284-BF78-4738-B4D4-C53C3EFC8258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1268284-BF78-4738-B4D4-C53C3EFC8258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1E38EE9-8813-4906-8DC5-E6EB35FA9DDE}
+	EndGlobalSection
+EndGlobal
